@@ -2,6 +2,7 @@ package ru.test.mapstructexample.train;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 import org.mapstruct.factory.Mappers;
 import ru.test.mapstructexample.space.SpaceShip;
 
@@ -12,6 +13,11 @@ public interface TrainMapper {
     @Mapping(target = "name", source = "model")
     @Mapping(target = "speed", source = "maxSpeed")
     @Mapping(target = "fuel", constant = "12.22")
+    @Mapping(target = "userValue", source = "param", qualifiedByName = "getStringByNumber")
     SpaceShip trainToSpaceShip(Train train);
 
+    @Named("getStringByNumber")
+    default String getStringByNumber(int param) {
+        return String.valueOf(param + 2) + " test";
+    }
 }

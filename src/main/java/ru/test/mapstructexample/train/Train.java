@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class Train {
     private String model;
     private Float maxSpeed;
+    private int param;
 }

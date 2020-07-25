@@ -11,4 +11,5 @@ public class SpaceShip {
     private String name;
     private Float speed;
     private Double fuel;
+    private String userValue;
 }
