@@ -9,9 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Train {
-    private String model;
-    private Float maxSpeed;
-    private int param;
-    private Address address;
+public class Address {
+    private String street;
 }

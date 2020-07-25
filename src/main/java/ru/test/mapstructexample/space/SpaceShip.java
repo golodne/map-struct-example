@@ -12,4 +12,5 @@ public class SpaceShip {
     private Float speed;
     private Double fuel;
     private String userValue;
+    private String streetName;
 }

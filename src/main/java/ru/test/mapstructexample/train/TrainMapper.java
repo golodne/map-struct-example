@@ -14,6 +14,7 @@ public interface TrainMapper {
     @Mapping(target = "speed", source = "maxSpeed")
     @Mapping(target = "fuel", constant = "12.22")
     @Mapping(target = "userValue", source = "param", qualifiedByName = "getStringByNumber")
+    @Mapping(target = "streetName", source = "address.street")
     SpaceShip trainToSpaceShip(Train train);
 
     @Named("getStringByNumber")
